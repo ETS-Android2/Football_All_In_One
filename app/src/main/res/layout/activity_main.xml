@@ -1,0 +1,663 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/league_select_bg"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.19" />
+
+    <ImageView
+        android:id="@+id/select_league_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        app:srcCompat="@drawable/select_league_text" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.08" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.52" />
+
+    <ImageView
+        android:id="@+id/field"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline4"
+        app:srcCompat="@drawable/field_without_circle" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.21" />
+
+    <Button
+        android:id="@+id/champions_league_btn"
+        android:layout_width="38dp"
+        android:layout_height="37dp"
+        android:background="@drawable/uefa"
+        app:layout_constraintBottom_toBottomOf="@+id/field"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.785"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/field"
+        app:layout_constraintVertical_bias="0.255" />
+
+    <Button
+        android:id="@+id/champions_league_teams_btn"
+        android:layout_width="52dp"
+        android:layout_height="23dp"
+        android:background="@drawable/teams_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/champions_league_btn"
+        app:layout_constraintHorizontal_bias="0.958"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline4"
+        app:layout_constraintVertical_bias="0.21" />
+
+    <Button
+        android:id="@+id/champions_league_standings_btn"
+        android:layout_width="52dp"
+        android:layout_height="25dp"
+        android:background="@drawable/standings_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/champions_league_teams_btn"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/champions_league_teams_btn"
+        app:layout_constraintVertical_bias="0.004" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/champions_league_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="champions_league_teams_btn,champions_league_standings_btn" />
+
+    <Button
+        android:id="@+id/la_liga_btn"
+        android:layout_width="38dp"
+        android:layout_height="33dp"
+        android:background="@drawable/la_liga"
+        app:layout_constraintBottom_toBottomOf="@+id/field"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2158"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/field"
+        app:layout_constraintVertical_bias="0.25" />
+
+    <Button
+        android:id="@+id/la_liga_teams_btn"
+        android:layout_width="52dp"
+        android:layout_height="23dp"
+        android:layout_marginEnd="252dp"
+        android:background="@drawable/teams_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.028"
+        app:layout_constraintStart_toEndOf="@+id/la_liga_btn"
+        app:layout_constraintTop_toTopOf="@+id/guideline4"
+        app:layout_constraintVertical_bias="0.21" />
+
+    <Button
+        android:id="@+id/la_liga_standings_btn"
+        android:layout_width="52dp"
+        android:layout_height="25dp"
+        android:background="@drawable/standings_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@+id/la_liga_teams_btn"
+        app:layout_constraintTop_toBottomOf="@+id/la_liga_teams_btn"
+        app:layout_constraintVertical_bias="0.004" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/la_liga_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="la_liga_teams_btn,la_liga_standings_btn" />
+
+    <Button
+        android:id="@+id/premier_league_btn"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:background="@drawable/premier_league"
+        app:layout_constraintBottom_toBottomOf="@id/field"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline4"
+        app:layout_constraintVertical_bias="0.367" />
+
+    <Button
+        android:id="@+id/premier_league_teams_btn"
+        android:layout_width="52dp"
+        android:layout_height="23dp"
+        android:layout_marginEnd="140dp"
+        android:background="@drawable/teams_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.023"
+        app:layout_constraintStart_toEndOf="@+id/premier_league_btn"
+        app:layout_constraintTop_toTopOf="@+id/guideline4"
+        app:layout_constraintVertical_bias="0.328" />
+
+    <Button
+        android:id="@+id/premier_league_standings_btn"
+        android:layout_width="52dp"
+        android:layout_height="25dp"
+        android:background="@drawable/standings_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@+id/premier_league_teams_btn"
+        app:layout_constraintTop_toBottomOf="@+id/premier_league_teams_btn"
+        app:layout_constraintVertical_bias="0.005" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/premier_league_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="premier_league_teams_btn,premier_league_standings_btn" />
+
+    <Button
+        android:id="@+id/fa_cup_btn"
+        android:layout_width="21.86dp"
+        android:layout_height="36dp"
+        android:background="@drawable/fa_cup"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.289"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        app:layout_constraintVertical_bias="0.471" />
+
+    <Button
+        android:id="@+id/fa_cup_teams_btn"
+        android:layout_width="52dp"
+        android:layout_height="23dp"
+        android:background="@drawable/teams_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/fa_cup_btn"
+        app:layout_constraintHorizontal_bias="0.72"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline4"
+        app:layout_constraintVertical_bias="0.41" />
+
+    <Button
+        android:id="@+id/fa_cup_standings_btn"
+        android:layout_width="52dp"
+        android:layout_height="25dp"
+        android:background="@drawable/standings_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/fa_cup_teams_btn"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fa_cup_teams_btn"
+        app:layout_constraintVertical_bias="0.006" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/fa_cup_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="fa_cup_teams_btn,fa_cup_standings_btn" />
+
+    <Button
+        android:id="@+id/europa_league_btn"
+        android:layout_width="26dp"
+        android:layout_height="36dp"
+        android:background="@drawable/europa"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.712"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline4"
+        app:layout_constraintVertical_bias="0.456" />
+
+    <Button
+        android:id="@+id/europa_league_teams_btn"
+        android:layout_width="52dp"
+        android:layout_height="23dp"
+        android:layout_marginEnd="61dp"
+        android:background="@drawable/teams_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.043"
+        app:layout_constraintStart_toEndOf="@+id/europa_league_btn"
+        app:layout_constraintTop_toTopOf="@+id/guideline4"
+        app:layout_constraintVertical_bias="0.41" />
+
+    <Button
+        android:id="@+id/europa_league_standings_btn"
+        android:layout_width="52dp"
+        android:layout_height="25dp"
+        android:background="@drawable/standings_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@+id/europa_league_teams_btn"
+        app:layout_constraintTop_toBottomOf="@+id/europa_league_teams_btn"
+        app:layout_constraintVertical_bias="0.006" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/europa_league_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="europa_league_teams_btn,europa_league_standings_btn" />
+
+    <Button
+        android:id="@+id/ligue1_btn"
+        android:layout_width="23dp"
+        android:layout_height="35dp"
+        android:background="@drawable/ligue_1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/field"
+        app:layout_constraintVertical_bias="0.642" />
+
+    <Button
+        android:id="@+id/ligue1_teams_btn"
+        android:layout_width="52dp"
+        android:layout_height="23dp"
+        android:background="@drawable/teams_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ligue1_btn"
+        app:layout_constraintHorizontal_bias="0.875"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline4"
+        app:layout_constraintVertical_bias="0.593" />
+
+    <Button
+        android:id="@+id/ligue1_standings_btn"
+        android:layout_width="52dp"
+        android:layout_height="25dp"
+        android:background="@drawable/standings_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/ligue1_teams_btn"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ligue1_teams_btn"
+        app:layout_constraintVertical_bias="0.008" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/ligue1_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="ligue1_teams_btn,ligue1_standings_btn" />
+
+    <Button
+        android:id="@+id/serie_a_btn"
+        android:layout_width="36dp"
+        android:layout_height="40dp"
+        android:background="@drawable/serie_a"
+        app:layout_constraintBottom_toBottomOf="@+id/field"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline4"
+        app:layout_constraintVertical_bias="0.691" />
+
+    <Button
+        android:id="@+id/serie_a_teams_btn"
+        android:layout_width="52dp"
+        android:layout_height="23dp"
+        android:layout_marginEnd="140dp"
+        android:background="@drawable/teams_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toEndOf="@+id/serie_a_btn"
+        app:layout_constraintTop_toTopOf="@+id/guideline4"
+        app:layout_constraintVertical_bias="0.638" />
+
+    <Button
+        android:id="@+id/serie_a_standings_btn"
+        android:layout_width="52dp"
+        android:layout_height="25dp"
+        android:background="@drawable/standings_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@+id/serie_a_teams_btn"
+        app:layout_constraintTop_toBottomOf="@+id/serie_a_teams_btn"
+        app:layout_constraintVertical_bias="0.0083" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/serie_a_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="serie_a_teams_btn,serie_a_standings_btn" />
+
+    <Button
+        android:id="@+id/bundesliga_btn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/bundesliga"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.84"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline4"
+        app:layout_constraintVertical_bias="0.6895" />
+
+    <Button
+        android:id="@+id/bundesliga_teams_btn"
+        android:layout_width="52dp"
+        android:layout_height="23dp"
+        android:background="@drawable/teams_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/bundesliga_btn"
+        app:layout_constraintHorizontal_bias="0.9438"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline4"
+        app:layout_constraintVertical_bias="0.638" />
+
+    <Button
+        android:id="@+id/bundesliga_standings_btn"
+        android:layout_width="52dp"
+        android:layout_height="25dp"
+        android:background="@drawable/standings_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/bundesliga_teams_btn"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bundesliga_teams_btn"
+        app:layout_constraintVertical_bias="0.0088" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/bundesliga_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="bundesliga_teams_btn,bundesliga_standings_btn" />
+
+    <Button
+        android:id="@+id/copa_del_rey_btn"
+        android:layout_width="40dp"
+        android:layout_height="33dp"
+        android:background="@drawable/copa_del_rey"
+        app:layout_constraintBottom_toBottomOf="@+id/field"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.305"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline4"
+        app:layout_constraintVertical_bias="0.81" />
+
+    <Button
+        android:id="@+id/copa_del_rey_teams_btn"
+        android:layout_width="52dp"
+        android:layout_height="23dp"
+        android:layout_marginEnd="140dp"
+        android:background="@drawable/teams_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.03"
+        app:layout_constraintStart_toEndOf="@+id/copa_del_rey_btn"
+        app:layout_constraintTop_toTopOf="@+id/guideline4"
+        app:layout_constraintVertical_bias="0.755" />
+
+    <Button
+        android:id="@+id/copa_del_rey_standings_btn"
+        android:layout_width="52dp"
+        android:layout_height="25dp"
+        android:background="@drawable/standings_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@+id/copa_del_rey_teams_btn"
+        app:layout_constraintTop_toBottomOf="@+id/copa_del_rey_teams_btn"
+        app:layout_constraintVertical_bias="0.013" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/copa_del_rey_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="copa_del_rey_teams_btn,copa_del_rey_standings_btn" />
+
+    <Button
+        android:id="@+id/copa_america_btn"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:background="@drawable/copa_america"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.695"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline4"
+        app:layout_constraintVertical_bias="0.81" />
+
+    <Button
+        android:id="@+id/copa_america_teams_btn"
+        android:layout_width="52dp"
+        android:layout_height="23dp"
+        android:background="@drawable/teams_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/copa_america_btn"
+        app:layout_constraintHorizontal_bias="0.936"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline4"
+        app:layout_constraintVertical_bias="0.7558" />
+
+    <Button
+        android:id="@+id/copa_america_standings_btn"
+        android:layout_width="52dp"
+        android:layout_height="25dp"
+        android:background="@drawable/standings_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/copa_america_teams_btn"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/copa_america_teams_btn"
+        app:layout_constraintVertical_bias="0.015" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/copa_america_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="copa_america_teams_btn,copa_america_standings_btn" />
+
+    <Button
+        android:id="@+id/world_cup_btn"
+        android:layout_width="46dp"
+        android:layout_height="51dp"
+        android:background="@drawable/world_cup"
+        android:layout_marginTop="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/field"
+        app:layout_constraintVertical_bias="0.97" />
+
+    <Button
+        android:id="@+id/world_cup_teams_btn"
+        android:layout_width="52dp"
+        android:layout_height="23dp"
+        android:layout_marginEnd="140dp"
+        android:background="@drawable/teams_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.015"
+        app:layout_constraintStart_toEndOf="@+id/world_cup_btn"
+        app:layout_constraintTop_toTopOf="@+id/guideline4"
+        app:layout_constraintVertical_bias="0.893" />
+
+    <Button
+        android:id="@+id/world_cup_standings_btn"
+        android:layout_width="52dp"
+        android:layout_height="25dp"
+        android:background="@drawable/standings_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@+id/world_cup_teams_btn"
+        app:layout_constraintTop_toBottomOf="@+id/world_cup_teams_btn"
+        app:layout_constraintVertical_bias="0.04" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/world_cup_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="world_cup_teams_btn,world_cup_standings_btn" />
+
+    <ImageView
+        android:id="@+id/champions_league_circle"
+        android:layout_width="230dp"
+        android:layout_height="230dp"
+        app:layout_constraintBottom_toBottomOf="@+id/champions_league_btn"
+        app:layout_constraintEnd_toEndOf="@+id/champions_league_btn"
+        app:layout_constraintStart_toStartOf="@+id/champions_league_btn"
+        app:layout_constraintTop_toTopOf="@+id/champions_league_btn"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintVertical_bias="0.258"
+        app:srcCompat="@drawable/circle" />
+
+    <ImageView
+        android:id="@+id/la_liga_circle"
+        android:layout_width="230dp"
+        android:layout_height="230dp"
+        app:layout_constraintBottom_toBottomOf="@+id/la_liga_btn"
+        app:layout_constraintEnd_toEndOf="@+id/la_liga_btn"
+        app:layout_constraintStart_toStartOf="@+id/la_liga_btn"
+        app:layout_constraintTop_toTopOf="@+id/la_liga_btn"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintVertical_bias="0.258"
+        app:srcCompat="@drawable/circle" />
+
+    <ImageView
+        android:id="@+id/premier_league_circle"
+        android:layout_width="230dp"
+        android:layout_height="230dp"
+        app:layout_constraintBottom_toBottomOf="@+id/premier_league_btn"
+        app:layout_constraintEnd_toEndOf="@+id/premier_league_btn"
+        app:layout_constraintStart_toStartOf="@+id/premier_league_btn"
+        app:layout_constraintTop_toTopOf="@+id/premier_league_btn"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintVertical_bias="0.258"
+        app:srcCompat="@drawable/circle" />
+
+    <ImageView
+        android:id="@+id/fa_cup_circle"
+        android:layout_width="230dp"
+        android:layout_height="230dp"
+        app:layout_constraintBottom_toBottomOf="@+id/fa_cup_btn"
+        app:layout_constraintEnd_toEndOf="@+id/fa_cup_btn"
+        app:layout_constraintStart_toStartOf="@+id/fa_cup_btn"
+        app:layout_constraintTop_toTopOf="@+id/fa_cup_btn"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintVertical_bias="0.258"
+        app:srcCompat="@drawable/circle" />
+
+    <ImageView
+        android:id="@+id/europa_league_circle"
+        android:layout_width="230dp"
+        android:layout_height="230dp"
+        app:layout_constraintBottom_toBottomOf="@+id/europa_league_btn"
+        app:layout_constraintEnd_toEndOf="@+id/europa_league_btn"
+        app:layout_constraintStart_toStartOf="@+id/europa_league_btn"
+        app:layout_constraintTop_toTopOf="@+id/europa_league_btn"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintVertical_bias="0.258"
+        app:srcCompat="@drawable/circle" />
+
+    <ImageView
+        android:id="@+id/serie_a_circle"
+        android:layout_width="230dp"
+        android:layout_height="230dp"
+        app:layout_constraintBottom_toBottomOf="@+id/serie_a_btn"
+        app:layout_constraintEnd_toEndOf="@+id/serie_a_btn"
+        app:layout_constraintStart_toStartOf="@+id/serie_a_btn"
+        app:layout_constraintTop_toTopOf="@+id/serie_a_btn"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintVertical_bias="0.258"
+        app:srcCompat="@drawable/circle" />
+
+    <ImageView
+        android:id="@+id/ligue1_circle"
+        android:layout_width="230dp"
+        android:layout_height="230dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ligue1_btn"
+        app:layout_constraintEnd_toEndOf="@+id/ligue1_btn"
+        app:layout_constraintStart_toStartOf="@+id/ligue1_btn"
+        app:layout_constraintTop_toTopOf="@+id/ligue1_btn"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintVertical_bias="0.258"
+        app:srcCompat="@drawable/circle" />
+
+    <ImageView
+        android:id="@+id/bundesliga_circle"
+        android:layout_width="230dp"
+        android:layout_height="230dp"
+        app:layout_constraintBottom_toBottomOf="@+id/bundesliga_btn"
+        app:layout_constraintEnd_toEndOf="@+id/bundesliga_btn"
+        app:layout_constraintStart_toStartOf="@+id/bundesliga_btn"
+        app:layout_constraintTop_toTopOf="@+id/bundesliga_btn"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintVertical_bias="0.258"
+        app:srcCompat="@drawable/circle" />
+
+    <ImageView
+        android:id="@+id/copa_del_rey_circle"
+        android:layout_width="230dp"
+        android:layout_height="230dp"
+        app:layout_constraintBottom_toBottomOf="@+id/copa_del_rey_btn"
+        app:layout_constraintEnd_toEndOf="@+id/copa_del_rey_btn"
+        app:layout_constraintStart_toStartOf="@+id/copa_del_rey_btn"
+        app:layout_constraintTop_toTopOf="@+id/copa_del_rey_btn"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintVertical_bias="0.258"
+        app:srcCompat="@drawable/circle" />
+
+    <ImageView
+        android:id="@+id/copa_america_circle"
+        android:layout_width="230dp"
+        android:layout_height="230dp"
+        app:layout_constraintBottom_toBottomOf="@+id/copa_america_btn"
+        app:layout_constraintEnd_toEndOf="@+id/copa_america_btn"
+        app:layout_constraintStart_toStartOf="@+id/copa_america_btn"
+        app:layout_constraintTop_toTopOf="@+id/copa_america_btn"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintVertical_bias="0.258"
+        app:srcCompat="@drawable/circle" />
+
+    <ImageView
+        android:id="@+id/world_cup_circle"
+        android:layout_width="230dp"
+        android:layout_height="230dp"
+        app:layout_constraintBottom_toBottomOf="@+id/world_cup_btn"
+        app:layout_constraintEnd_toEndOf="@+id/world_cup_btn"
+        app:layout_constraintStart_toStartOf="@+id/world_cup_btn"
+        app:layout_constraintTop_toTopOf="@+id/world_cup_btn"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintVertical_bias="0.258"
+        app:srcCompat="@drawable/circle" />
+</androidx.constraintlayout.widget.ConstraintLayout>
